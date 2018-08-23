@@ -20,6 +20,6 @@ Installation
 
 To install, clone this repository into your Sublime Text packages folder.
 You can find where your folder is located by clicking on 'Preferences -> Browse Packages'. Probable places:
-    * Linux - `~/.config/sublime-text-3/Packages/`
-    * Windows - `sublime-text-3\Data\Packages`
-    * Mac OSX - `~/Library/Application Support/Sublime Text 3/Packages`
+* Linux - `~/.config/sublime-text-3/Packages/`
+* Windows - `sublime-text-3\Data\Packages`
+* Mac OSX - `~/Library/Application Support/Sublime Text 3/Packages`
