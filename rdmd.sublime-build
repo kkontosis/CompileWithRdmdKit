@@ -1,0 +1,48 @@
+{
+  "selector": "source.d",
+  "file_regex": "^(?:.[^:]*@)?([a-zA-Z\\/\\._\\-~]*)[\\(:]([0-9][0-9]*)[\\)]?:?\\s?(.*)$",
+
+  "variants":
+  [
+    {
+      "name": "Run Unittest",
+      "cmd": ["dub-config", "--exec", "rdmd", "DUB_CONFIG_CFLAGS", "-unittest", "-debug", "-g", "--main", "$file"]
+    },
+    {
+      "name": "Run Main and Unittest",
+      "cmd": ["dub-config", "--exec", "rdmd", "DUB_CONFIG_CFLAGS", "-unittest", "-debug", "-g", "$file"]
+    },
+
+    {
+      "name": "dub",
+      "working_dir": "$project_path",
+      "cmd": ["dub"]
+    },
+    {
+      "name": "dub (single file)",
+      "working_dir": "$project_path",
+      "cmd": ["dub", "--single", "$file"]
+    },
+    {
+      "name": "dub build",
+      "working_dir": "$project_path",
+      "cmd": ["dub", "build"]
+    },
+    {
+      "name": "dub build (single file)",
+      "working_dir": "$project_path",
+      "cmd": ["dub", "build", "--single", "$file"]
+    },
+    {
+      "name": "dub test",
+      "working_dir": "$project_path",
+      "cmd": ["dub", "test"]
+    },
+    {
+      "name": "dub describe",
+      "working_dir": "$project_path",
+      "cmd": ["dub", "build"]
+    },
+
+  ]
+}
